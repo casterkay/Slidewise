@@ -1,0 +1,177 @@
+{
+  "status": "success",
+  "job_id": "a1b2c3d4e5f6",
+  "video": {
+    "title": "Understanding React Hooks in 15 Minutes",
+    "duration": 920.0,
+    "channel": "React Mastery",
+    "url": "https://www.youtube.com/watch?v=example123",
+    "thumbnail_url": "https://i.ytimg.com/vi/example123/maxresdefault.jpg",
+    "upload_date": "20260315",
+    "chapters": [
+      {"title": "Introduction", "start_time": 0.0, "end_time": 60.0},
+      {"title": "What are Hooks?", "start_time": 60.0, "end_time": 240.0},
+      {"title": "useState Deep Dive", "start_time": 240.0, "end_time": 480.0},
+      {"title": "useEffect Patterns", "start_time": 480.0, "end_time": 720.0},
+      {"title": "Custom Hooks", "start_time": 720.0, "end_time": 860.0},
+      {"title": "Wrap Up", "start_time": 860.0, "end_time": 920.0}
+    ]
+  },
+  "segments": [
+    {
+      "index": 0,
+      "title": "Introduction",
+      "start_time": 0.0,
+      "end_time": 60.0,
+      "transcript": "Welcome to this tutorial on React Hooks. Today we'll cover the most important hooks you need to know, starting with useState and useEffect, and then building our own custom hooks.",
+      "content_type": "intro",
+      "suggested_slide_type": "title",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "Welcome to this tutorial on React Hooks. Today we'll cover the most important hooks you need to know, starting with useState and useEffect, and then building our own custom hooks."
+    },
+    {
+      "index": 1,
+      "title": "What are Hooks?",
+      "start_time": 60.0,
+      "end_time": 240.0,
+      "transcript": "Hooks are functions that let you use state and other React features in functional components. Before hooks, you needed class components for state management. The key rules are: only call hooks at the top level, and only call hooks from React functions.",
+      "content_type": "explanation",
+      "suggested_slide_type": "content",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "Hooks are functions that let you use state and other React features in functional components. Before hooks, you needed class components for state management. The key rules are: only call hooks at the top level, and only call hooks from React functions."
+    },
+    {
+      "index": 2,
+      "title": "useState Deep Dive",
+      "start_time": 240.0,
+      "end_time": 480.0,
+      "transcript": "Let's look at useState. You import it from React, then call it with an initial value. It returns an array with the current state and a setter function. const [count, setCount] = useState(0). You can use multiple useState calls for different pieces of state.",
+      "content_type": "live_coding",
+      "suggested_slide_type": "code",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "Let's look at useState. You import it from React, then call it with an initial value. It returns an array with the current state and a setter function. const [count, setCount] = useState(0). You can use multiple useState calls for different pieces of state."
+    },
+    {
+      "index": 3,
+      "title": "useEffect Patterns",
+      "start_time": 480.0,
+      "end_time": 720.0,
+      "transcript": "useEffect lets you perform side effects in your components. It runs after every render by default. You can control when it runs by passing a dependency array. An empty array means it only runs once on mount. Return a cleanup function to avoid memory leaks.",
+      "content_type": "explanation",
+      "suggested_slide_type": "content",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "useEffect lets you perform side effects in your components. It runs after every render by default. You can control when it runs by passing a dependency array. An empty array means it only runs once on mount. Return a cleanup function to avoid memory leaks."
+    },
+    {
+      "index": 4,
+      "title": "Custom Hooks",
+      "start_time": 720.0,
+      "end_time": 860.0,
+      "transcript": "Custom hooks let you extract reusable logic. Name them with the use prefix. For example, function useWindowSize returns the current window dimensions. Custom hooks can call other hooks and compose nicely.",
+      "content_type": "live_coding",
+      "suggested_slide_type": "code",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "Custom hooks let you extract reusable logic. Name them with the use prefix. For example, function useWindowSize returns the current window dimensions. Custom hooks can call other hooks and compose nicely."
+    },
+    {
+      "index": 5,
+      "title": "Wrap Up",
+      "start_time": 860.0,
+      "end_time": 920.0,
+      "transcript": "That's it for today's tutorial on React Hooks. Remember: useState for state, useEffect for side effects, and custom hooks for reusable logic. Thanks for watching and see you next time.",
+      "content_type": "outro",
+      "suggested_slide_type": "summary",
+      "keyframe": null,
+      "code_blocks": [],
+      "speaker_notes": "That's it for today's tutorial on React Hooks. Remember: useState for state, useEffect for side effects, and custom hooks for reusable logic. Thanks for watching and see you next time."
+    }
+  ],
+  "slide_outline": [
+    {
+      "slide_number": 1,
+      "type": "title",
+      "title": "Understanding React Hooks in 15 Minutes",
+      "subtitle": "by React Mastery",
+      "bullets": null,
+      "code": null,
+      "code_language": null,
+      "has_image": false,
+      "source_segment": 0
+    },
+    {
+      "slide_number": 2,
+      "type": "content",
+      "title": "What are Hooks?",
+      "subtitle": null,
+      "bullets": [
+        "Functions that let you use state and React features in functional components",
+        "Before hooks, class components were needed for state management",
+        "Only call hooks at the top level and from React functions"
+      ],
+      "code": null,
+      "code_language": null,
+      "has_image": false,
+      "source_segment": 1
+    },
+    {
+      "slide_number": 3,
+      "type": "code",
+      "title": "useState Deep Dive",
+      "subtitle": null,
+      "bullets": ["Returns array with current state and setter", "Use multiple useState for different state"],
+      "code": "const [count, setCount] = useState(0);",
+      "code_language": "jsx",
+      "has_image": false,
+      "source_segment": 2
+    },
+    {
+      "slide_number": 4,
+      "type": "content",
+      "title": "useEffect Patterns",
+      "subtitle": null,
+      "bullets": [
+        "Perform side effects after render",
+        "Dependency array controls when it runs",
+        "Empty array = run once on mount",
+        "Return cleanup function to avoid memory leaks"
+      ],
+      "code": null,
+      "code_language": null,
+      "has_image": false,
+      "source_segment": 3
+    },
+    {
+      "slide_number": 5,
+      "type": "code",
+      "title": "Custom Hooks",
+      "subtitle": null,
+      "bullets": ["Extract reusable logic with use prefix", "Can call other hooks and compose nicely"],
+      "code": "function useWindowSize() {\n  const [size, setSize] = useState(window.innerWidth);\n  useEffect(() => {\n    const handler = () => setSize(window.innerWidth);\n    window.addEventListener('resize', handler);\n    return () => window.removeEventListener('resize', handler);\n  }, []);\n  return size;\n}",
+      "code_language": "jsx",
+      "has_image": false,
+      "source_segment": 4
+    },
+    {
+      "slide_number": 6,
+      "type": "summary",
+      "title": "Key Takeaways",
+      "subtitle": null,
+      "bullets": [
+        "useState for component state management",
+        "useEffect for side effects with dependency control",
+        "Custom hooks for reusable logic (use prefix)",
+        "Only call hooks at top level, from React functions"
+      ],
+      "code": null,
+      "code_language": null,
+      "has_image": false,
+      "source_segment": 5
+    }
+  ],
+  "processing_time_seconds": 4.2
+}

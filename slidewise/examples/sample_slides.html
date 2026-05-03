@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding React Hooks in 15 Minutes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/night.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <style>
+    .reveal h1 { font-size: 2.2em; }
+    .reveal h2 { font-size: 1.6em; }
+    .reveal ul, .reveal ol { text-align: left; }
+    .reveal li { margin-bottom: 0.4em; line-height: 1.4; }
+    .reveal pre { width: 95%; font-size: 0.65em; }
+    .reveal img { max-height: 55vh; border-radius: 8px; }
+    .reveal .subtitle { font-size: 0.7em; color: #aaa; margin-top: 0.3em; }
+    .reveal .timestamp { font-size: 0.5em; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section>
+        <h1>Understanding React Hooks in 15 Minutes</h1>
+        <p class="subtitle">by React Mastery</p>
+        <p class="timestamp">March 15, 2026</p>
+        <aside class="notes">Welcome to this tutorial on React Hooks. Today we'll cover the most important hooks you need to know, starting with useState and useEffect, and then building our own custom hooks.</aside>
+      </section>
+
+      <!-- Slide 2: What are Hooks? -->
+      <section>
+        <h2>What are Hooks?</h2>
+        <ul>
+          <li>Functions that let you use state and React features in functional components</li>
+          <li>Before hooks, class components were needed for state management</li>
+          <li>Only call hooks at the top level and from React functions</li>
+        </ul>
+        <aside class="notes">Hooks are functions that let you use state and other React features in functional components. Before hooks, you needed class components for state management. The key rules are: only call hooks at the top level, and only call hooks from React functions.</aside>
+      </section>
+
+      <!-- Slide 3: useState Deep Dive -->
+      <section>
+        <h2>useState Deep Dive</h2>
+        <pre><code class="jsx" data-trim data-noescape>
+const [count, setCount] = useState(0);
+
+// Multiple state variables
+const [name, setName] = useState('');
+const [items, setItems] = useState([]);
+        </code></pre>
+        <ul>
+          <li>Returns array with current state and setter</li>
+          <li>Use multiple useState for different state</li>
+        </ul>
+        <aside class="notes">Let's look at useState. You import it from React, then call it with an initial value. It returns an array with the current state and a setter function.</aside>
+      </section>
+
+      <!-- Slide 4: useEffect Patterns -->
+      <section>
+        <h2>useEffect Patterns</h2>
+        <ul>
+          <li>Perform side effects after render</li>
+          <li>Dependency array controls when it runs</li>
+          <li>Empty array = run once on mount</li>
+          <li>Return cleanup function to avoid memory leaks</li>
+        </ul>
+        <aside class="notes">useEffect lets you perform side effects in your components. It runs after every render by default. You can control when it runs by passing a dependency array.</aside>
+      </section>
+
+      <!-- Slide 5: Custom Hooks -->
+      <section>
+        <h2>Custom Hooks</h2>
+        <pre><code class="jsx" data-trim data-noescape>
+function useWindowSize() {
+  const [size, setSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handler = () => setSize(window.innerWidth);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, []);
+  return size;
+}
+        </code></pre>
+        <ul>
+          <li>Extract reusable logic with <code>use</code> prefix</li>
+          <li>Can call other hooks and compose nicely</li>
+        </ul>
+        <aside class="notes">Custom hooks let you extract reusable logic. Name them with the use prefix.</aside>
+      </section>
+
+      <!-- Slide 6: Key Takeaways -->
+      <section>
+        <h2>Key Takeaways</h2>
+        <ol>
+          <li><strong>useState</strong> for component state management</li>
+          <li><strong>useEffect</strong> for side effects with dependency control</li>
+          <li><strong>Custom hooks</strong> for reusable logic (use prefix)</li>
+          <li>Only call hooks at top level, from React functions</li>
+        </ol>
+        <aside class="notes">That's it for today's tutorial on React Hooks. Remember: useState for state, useEffect for side effects, and custom hooks for reusable logic.</aside>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [RevealHighlight, RevealNotes],
+      transition: 'slide',
+    });
+  </script>
+</body>
+</html>

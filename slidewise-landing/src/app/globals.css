@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Color Tokens */
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-light: oklch(0.65 0.15 250 / 0.08);
+  --color-primary-glow: oklch(0.65 0.15 250 / 0.15);
+  --color-secondary: #8B5CF6;
+  --color-secondary-light: oklch(0.55 0.2 290 / 0.08);
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FAFAFA;
+  --color-surface-secondary: #F5F5F7;
+  --color-text: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  --color-border: oklch(0 0 0 / 0.06);
+  --color-border-strong: oklch(0 0 0 / 0.10);
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Spacing (extending defaults) */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-120: 30rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Focus ring (WCAG 2.2 AA) */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
