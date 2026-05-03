@@ -1,40 +1,26 @@
+import { Layers, Monitor, PenTool, Users } from "lucide-react";
+
 const useCases = [
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-      </svg>
-    ),
+    icon: <PenTool size={22} className="text-purple-500" strokeWidth={2} />,
     iconBg: "bg-secondary-light",
     title: "Tutorials & Courses",
     description: "Transform technical walkthroughs into structured slide decks with code blocks, diagrams, and speaker notes preserved.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
+    icon: <Users size={22} className="text-blue-500" strokeWidth={2} />,
     iconBg: "bg-primary-light",
     title: "Meeting Recordings",
     description: "Distill hour-long meetings into concise recap decks. Key decisions, action items, and discussion points on clear slides.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19 16V6a2 2 0 0 0-2-2H2" /><path d="M22 20H7a2 2 0 0 1-2-2V9" /><path d="m9 13 3 3 3-3" />
-      </svg>
-    ),
+    icon: <Layers size={22} className="text-green-600" strokeWidth={2} />,
     iconBg: "bg-success/8",
     title: "Podcasts & Talks",
     description: "Convert conference talks and podcast episodes into shareable visual summaries your audience can skim in minutes.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    ),
+    icon: <Monitor size={22} className="text-amber-600" strokeWidth={2} />,
     iconBg: "bg-warning/8",
     title: "Screen Recordings",
     description: "Turn demo recordings and product walkthroughs into step-by-step visual guides with extracted keyframes.",

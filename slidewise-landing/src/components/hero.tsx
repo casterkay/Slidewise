@@ -1,3 +1,4 @@
+import { ArrowRight, Play } from "lucide-react";
 import { WaitlistForm } from "./waitlist-form";
 
 export function Hero() {
@@ -24,7 +25,7 @@ export function Hero() {
 
         <p className="text-lg leading-relaxed text-text-secondary max-w-[560px] mx-auto mb-8">
           Turn podcasts, tutorials, meeting recordings, and screen recordings
-          into polished reveal.js slide decks &mdash; right from your terminal.
+          into polished slide decks &mdash; right from your terminal.
         </p>
 
         <WaitlistForm id="hero-form" />
@@ -51,9 +52,7 @@ export function Hero() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-text rounded-lg flex items-center justify-center shrink-0">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
+                    <Play size={20} className="fill-white text-white" />
                   </div>
                   <div className="text-left">
                     <div className="text-sm font-semibold text-text">
@@ -68,12 +67,8 @@ export function Hero() {
 
               {/* Arrow */}
               <div className="flex items-center justify-center text-primary rotate-90 md:rotate-0">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
+                <ArrowRight size={24} className="text-current" strokeWidth={2} />
               </div>
-
               {/* Output */}
               <div className="bg-[#1E1E2E] border border-white/6 rounded-xl p-6 min-h-[200px] flex flex-col justify-center">
                 <div className="text-xs font-semibold uppercase tracking-wider text-white/30 mb-3">

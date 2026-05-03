@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Slidewise — Turn Any Video into Beautiful Slides",
   description:
-    "Convert podcasts, tutorials, meeting recordings, and screen recordings into polished reveal.js slide decks. Powered by AI agent skills for Claude Code.",
+    "Convert podcasts, tutorials, meeting recordings, and screen recordings into polished slide decks. Powered by AI agent skills for Claude Code.",
 };
 
 export default function RootLayout({

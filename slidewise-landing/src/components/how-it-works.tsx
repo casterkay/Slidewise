@@ -29,7 +29,7 @@ const steps = [
   },
   {
     number: 3,
-    title: "Get a reveal.js deck",
+    title: "Get a slides deck",
     description:
       "Your agent generates a self-contained HTML file. Open it in any browser. Customize themes, reorder slides, or refine content conversationally.",
     code: (
